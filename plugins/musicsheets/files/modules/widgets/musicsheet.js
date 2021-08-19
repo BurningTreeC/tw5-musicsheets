@@ -92,7 +92,7 @@ ABCJSWidget.prototype.execute = function() {
 	this.svgPerLine = this.getAttribute("separatelines") === "yes";
 	this.hintMeasures = this.getAttribute("hints") === "yes";
 	this.autoPlay = this.getAttribute("autoplay") === "yes";
-	this.program = this.getAttribute("sound","acoustic_grand_piano");
+	this.program = this.getAttribute("sound") || this.wiki.getTiddlerText("$:/config/musicsheets/program") || "acoustic_grand_piano";
 	this.makeChildWidgets();
 };
 
