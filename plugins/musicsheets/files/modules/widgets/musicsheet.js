@@ -93,7 +93,7 @@ ABCJSWidget.prototype.execute = function() {
 	this.soundfont = this.getAttribute("soundfont","");
 	this.svgPerLine = this.getAttribute("separatelines") === "yes";
 	this.hintMeasures = this.getAttribute("hints") === "yes";
-	this.autoPlay = this.getAttribute("autoplay") === "yes";
+	this.sound = this.getAttribute("sound");
 	this.program = this.getAttribute("sound") || this.wiki.getTiddlerText("$:/config/musicsheets/program") || "acoustic_grand_piano";
 	this.makeChildWidgets();
 };
@@ -104,7 +104,7 @@ Selectively refreshes the widget if needed. Returns true if the widget or any of
 ABCJSWidget.prototype.refresh = function(changedTiddlers) {
 	var changedAttributes = this.computeAttributes();
 	if(changedAttributes.tiddler || changedAttributes.midi || changedAttributes.soundfont || changedAttributes.separatelines ||
-		changedAttributes.hints || changedAttributes.autoplay || changedAttributes.sound || changedTiddlers[this.tiddler] || changedTiddlers["$:/config/musicsheets/program"]) {
+		changedAttributes.hints || changedAttributes.autoplay || changedAttributes.sound || changedTiddlers[this.tiddler] || (changedTiddlers["$:/config/musicsheets/program"] && !this.sound)) {
 		this.synthControl.pause();
 		this.refreshSelf();
 		return true;

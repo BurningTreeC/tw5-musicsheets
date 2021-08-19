@@ -5,7 +5,7 @@ caption: Music
 !!! Program
 
 <$select tiddler="$:/config/musicsheets/program">
-	<$list filter="[list[$:/plugins/BTC/musicsheets/utils/program-list]]" variable="program">
+	<$list filter="[list[$:/plugins/BTC/musicsheets/utils/program-list]sortan[]]" variable="program">
 		<option value=<<program>>>{{{ [<program>search-replace:g[_],[ ]] }}}</option>
 	</$list>
 </$select>
