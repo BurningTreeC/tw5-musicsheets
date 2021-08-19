@@ -54,6 +54,10 @@ ABCJSWidget.prototype.render = function(parent,nextSibling) {
 			add_classes: true,
 			oneSvgPerLine: self.svgPerLine
 		});
+		var midi = ABCJS.synth.getMidiFile(renderedABC[0], { chordsOff: true, midiOutputType: "link" });
+		this.midiNode = this.document.createElement("div");
+		this.midiNode.innerHTML = midi;
+		parent.insertBefore(this.midiNode,nextSibling);
 	}
 	if(renderedABC && this.renderMidi) {
 		this.pNode2 = this.document.createElement("div");
