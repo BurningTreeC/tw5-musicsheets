@@ -51,7 +51,7 @@ ABCJSWidget.prototype.render = function(parent,nextSibling) {
 			this.parentwidth = parent.clientWidth;
 
 			ABCJS.renderAbc(this.pNode, "%%staffwidth "+width+"\n"+this.tunebookString, {
-				hint_measures: self.hintMeasures,
+				hint_measures: true,
 				responsive: "resize",
 				add_classes: true,
 				oneSvgPerLine: self.svgPerLine
@@ -89,12 +89,10 @@ Compute the internal state of the widget
 */
 ABCJSWidget.prototype.execute = function() {
 	this.tiddler = this.getAttribute("tiddler",undefined);
-	this.renderMidi = this.getAttribute("midi","") === "yes";
-	this.soundfont = this.getAttribute("soundfont","");
-	this.svgPerLine = this.getAttribute("separatelines") === "yes";
-	this.hintMeasures = this.getAttribute("hints") === "yes";
+	this.renderMidi = this.getAttribute("midi","no") === "yes";
+	this.svgPerLine = this.getAttribute("separatelines","no") === "yes";
 	this.sound = this.getAttribute("sound");
-	this.program = this.getAttribute("sound") || this.wiki.getTiddlerText("$:/config/musicsheets/program") || "acoustic_grand_piano";
+	this.program = this.sound || this.wiki.getTiddlerText("$:/config/musicsheets/program") || "acoustic_grand_piano";
 	this.makeChildWidgets();
 };
 
