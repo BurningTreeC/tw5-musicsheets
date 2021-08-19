@@ -57,43 +57,12 @@ ABCJSWidget.prototype.render = function(parent,nextSibling) {
 		parent.insertBefore(this.pNode2,nextSibling);
 		if(ABCJS.synth.supportsAudio()) {
 			this.synthControl = new ABCJS.synth.SynthController();
-			this.synthControl.load(this.pNode2, null, {displayRestart: true, displayPlay: true, displayProgress: true});
-			this.synthControl.setTune(renderedABC, false);
-			function setTune(userAction) {
-				var midiBuffer = new ABCJS.synth.CreateSynth();
-				midiBuffer.init({
-					//audioContext: new AudioContext(),
-					visualObj: renderedABC[0],
-					// sequence: [],
-					// millisecondsPerMeasure: 1000,
-					// debugCallback: function(message) { console.log(message) },
-					options: {
-						// soundFontUrl: "https://paulrosen.github.io/midi-js-soundfonts/FluidR3_GM/" ,
-						// sequenceCallback: function(noteMapTracks, callbackContext) { return noteMapTracks; },
-						// callbackContext: this,
-						// onEnded: function(callbackContext),
-						// pan: [ -0.5, 0.5 ]
-					}
-				}).then(function (response) {
-					console.log(response);
-					if (self.synthControl) {
-						self.synthControl.setTune(renderedABC[0], userAction).then(function (response) {
-							console.log("Audio successfully loaded.")
-							//seekControls.classList.remove("disabled");
-							//seekExplanation();
-						}).catch(function (error) {
-							console.warn("Audio problem:", error);
-						});
-					}
-				}).catch(function (error) {
-					console.warn("Audio problem:", error);
-				});
-			}
-			setTune(false);
+			this.synthControl.load(this.pNode2, null, {displayLoop: true, displayRestart: true, displayPlay: true, displayProgress: true, displayWarp: true});
+			this.synthControl.setTune(renderedABC[0], false);
 		} else {
 			this.pNode2.innerHTML = "<div class='audio-error'>Audio is not supported in this browser.</div>";
 		}
-		this.domNodes.push(this.pNode2)
+		this.domNodes.push(this.pNode2);
 	}
 	this.domNodes.push(this.pNode);
 
@@ -126,6 +95,7 @@ ABCJSWidget.prototype.execute = function() {
 Selectively refreshes the widget if needed. Returns true if the widget or any of its children needed re-rendering
 */
 ABCJSWidget.prototype.refresh = function(changedTiddlers) {
+	console.log(changedTiddlers);
 	var changedAttributes = this.computeAttributes();
 	if(changedAttributes.tiddler || changedAttributes.midi || changedAttributes.soundfont || changedAttributes.separatelines ||
 		changedAttributes.hints || changedAttributes.autoplay || changedTiddlers[this.tiddler]) {
