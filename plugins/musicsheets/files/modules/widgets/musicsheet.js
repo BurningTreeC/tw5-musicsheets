@@ -45,18 +45,20 @@ ABCJSWidget.prototype.render = function(parent,nextSibling) {
 	var renderedABC;
 	if(this.tiddler) {
 		this.tunebookString = $tw.wiki.getTiddlerText(self.tiddler);
-		renderedABC = ABCJS.renderAbc(this.pNode, this.tunebookString);
-		var width = parent.clientWidth*2/3;
-		this.parentwidth = parent.clientWidth;
+		if(this.tunebookString) {
+			renderedABC = ABCJS.renderAbc(this.pNode, this.tunebookString);
+			var width = parent.clientWidth*2/3;
+			this.parentwidth = parent.clientWidth;
 
-		ABCJS.renderAbc(this.pNode, "%%staffwidth "+width+"\n"+this.tunebookString, {
-			hint_measures: self.hintMeasures,
-			responsive: "resize",
-			add_classes: true,
-			oneSvgPerLine: self.svgPerLine
-		});
+			ABCJS.renderAbc(this.pNode, "%%staffwidth "+width+"\n"+this.tunebookString, {
+				hint_measures: self.hintMeasures,
+				responsive: "resize",
+				add_classes: true,
+				oneSvgPerLine: self.svgPerLine
+			});
+		}
 	}
-	if(this.renderMidi) {
+	if(renderedABC && this.renderMidi) {
 		this.pNode2 = this.document.createElement("div");
 		parent.insertBefore(this.pNode2,nextSibling);
 		if(ABCJS.synth.supportsAudio()) {
@@ -100,10 +102,9 @@ ABCJSWidget.prototype.execute = function() {
 Selectively refreshes the widget if needed. Returns true if the widget or any of its children needed re-rendering
 */
 ABCJSWidget.prototype.refresh = function(changedTiddlers) {
-	console.log(changedTiddlers);
 	var changedAttributes = this.computeAttributes();
 	if(changedAttributes.tiddler || changedAttributes.midi || changedAttributes.soundfont || changedAttributes.separatelines ||
-		changedAttributes.hints || changedAttributes.autoplay || changedAttributes.sound || changedTiddlers[this.tiddler]) {
+		changedAttributes.hints || changedAttributes.autoplay || changedAttributes.sound || changedTiddlers[this.tiddler] || changedTiddlers["$:/config/musicsheets/program"]) {
 		this.synthControl.pause();
 		this.refreshSelf();
 		return true;
