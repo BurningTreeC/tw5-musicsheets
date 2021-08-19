@@ -43,20 +43,17 @@ ABCJSWidget.prototype.render = function(parent,nextSibling) {
 	var program = programs.indexOf(this.program);
 
 	var renderedABC;
-	if(this.tiddler) {
-		this.tunebookString = $tw.wiki.getTiddlerText(self.tiddler);
-		if(this.tunebookString) {
-			renderedABC = ABCJS.renderAbc(this.pNode, this.tunebookString);
-			var width = parent.clientWidth*2/3;
-			this.parentwidth = parent.clientWidth;
+	if(this.text) {
+		renderedABC = ABCJS.renderAbc(this.pNode, this.text);
+		var width = parent.clientWidth*2/3;
+		this.parentwidth = parent.clientWidth;
 
-			ABCJS.renderAbc(this.pNode, "%%staffwidth "+width+"\n"+this.tunebookString, {
-				hint_measures: true,
-				responsive: "resize",
-				add_classes: true,
-				oneSvgPerLine: self.svgPerLine
-			});
-		}
+		ABCJS.renderAbc(this.pNode, "%%staffwidth "+width+"\n"+this.text, {
+			hint_measures: true,
+			responsive: "resize",
+			add_classes: true,
+			oneSvgPerLine: self.svgPerLine
+		});
 	}
 	if(renderedABC && this.renderMidi) {
 		this.pNode2 = this.document.createElement("div");
@@ -88,7 +85,7 @@ ABCJSWidget.prototype.render = function(parent,nextSibling) {
 Compute the internal state of the widget
 */
 ABCJSWidget.prototype.execute = function() {
-	this.tiddler = this.getAttribute("tiddler",undefined);
+	this.text = this.getAttribute("text",undefined);
 	this.renderMidi = this.getAttribute("midi","no") === "yes";
 	this.svgPerLine = this.getAttribute("separatelines","no") === "yes";
 	this.sound = this.getAttribute("sound");
@@ -101,8 +98,8 @@ Selectively refreshes the widget if needed. Returns true if the widget or any of
 */
 ABCJSWidget.prototype.refresh = function(changedTiddlers) {
 	var changedAttributes = this.computeAttributes();
-	if(changedAttributes.tiddler || changedAttributes.midi || changedAttributes.soundfont || changedAttributes.separatelines ||
-		changedAttributes.hints || changedAttributes.autoplay || changedAttributes.sound || changedTiddlers[this.tiddler] || (changedTiddlers["$:/config/musicsheets/program"] && !this.sound)) {
+	if(changedAttributes.text || changedAttributes.midi || changedAttributes.soundfont || changedAttributes.separatelines || 
+		changedAttributes.sound || changedTiddlers[this.tiddler] || (changedTiddlers["$:/config/musicsheets/program"] && !this.sound)) {
 		this.synthControl.pause();
 		this.refreshSelf();
 		return true;
