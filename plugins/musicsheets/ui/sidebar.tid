@@ -1,0 +1,11 @@
+title: $:/plugins/BTC/musicsheets/ui/SideBar
+tags: $:/tags/SideBar
+caption: Music
+
+!!! Program
+
+<$select tiddler="$:/config/musicsheets/program">
+	<$list filter="[list[$:/plugins/BTC/musicsheets/utils/program-list]]" variable="program">
+		<option value=<<program>>>{{{ [<program>search-replace[_],[ ]] }}}</option>
+	</$list>
+</$select>
