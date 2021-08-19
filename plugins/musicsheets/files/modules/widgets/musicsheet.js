@@ -6,7 +6,7 @@ module-type: widget
 renders abc music-notation to musical sheets
 
 \*/
-(function (global) {
+(function() {
 
 "use strict";
 /*jslint node: true, browser: true */
@@ -14,8 +14,10 @@ renders abc music-notation to musical sheets
 
 var Widget = require("$:/core/modules/widgets/widget.js").widget;
 
-if (typeof window !== 'undefined') {
-	require("$:/plugins/BTC/musicsheets/modules/widgets/abcjs-basic.js");
+var ABCJS;
+
+if(typeof window !== 'undefined') {
+	ABCJS = require("$:/plugins/BTC/musicsheets/lib/abcjs-basic.js");
 }
 
 var ABCJSWidget = function(parseTreeNode,options) {
@@ -36,9 +38,10 @@ ABCJSWidget.prototype.render = function(parent,nextSibling) {
 	this.execute();
 	this.pNode = this.document.createElement("div");
 	parent.insertBefore(this.pNode,nextSibling);
+	var renderedABC;
 	if(this.tiddler) {
 		this.tunebookString = $tw.wiki.getTiddlerText(self.tiddler);
-		ABCJS.renderAbc(this.pNode, this.tunebookString);
+		renderedABC = ABCJS.renderAbc(this.pNode, this.tunebookString);
 		var width = parent.clientWidth*2/3;
 		this.parentwidth = parent.clientWidth;
 
@@ -49,33 +52,50 @@ ABCJSWidget.prototype.render = function(parent,nextSibling) {
 			oneSvgPerLine: self.svgPerLine
 		});
 	}
-	this.domNodes.push(this.pNode);
-	
-	if(self.renderMidi === true) {
-		this.tunebookString = $tw.wiki.getTiddlerText(self.tiddler);
-		this.pNode2 = self.document.createElement("div");
-		self.parentDomNode.insertBefore(this.pNode2,nextSibling);
-		//if (typeof(MIDI) === 'undefined') 
-		var MIDI = {};
-		//if (typeof(MIDI.Soundfont) === 'undefined')
-		MIDI.Soundfont = {};
-		if(self.soundfont === "grand-piano") {
-			MIDI.Soundfont.acoustic_grand_piano = $tw.wiki.getTiddlerText("$:/plugins/BTC/musicsheets/soundfonts/grand-piano.json");
-		} else if(self.soundfont === "tuba") {
-			MIDI.Soundfont.acoustic_grand_piano = $tw.wiki.getTiddlerText("$:/plugins/BTC/musicsheets/soundfonts/tuba.json");
+	if(this.renderMidi) {
+		this.pNode2 = this.document.createElement("div");
+		parent.insertBefore(this.pNode2,nextSibling);
+		if(ABCJS.synth.supportsAudio()) {
+			this.synthControl = new ABCJS.synth.SynthController();
+			this.synthControl.load(this.pNode2, null, {displayRestart: true, displayPlay: true, displayProgress: true});
+			this.synthControl.setTune(renderedABC, false);
+			function setTune(userAction) {
+				var midiBuffer = new ABCJS.synth.CreateSynth();
+				midiBuffer.init({
+					//audioContext: new AudioContext(),
+					visualObj: renderedABC[0],
+					// sequence: [],
+					// millisecondsPerMeasure: 1000,
+					// debugCallback: function(message) { console.log(message) },
+					options: {
+						// soundFontUrl: "https://paulrosen.github.io/midi-js-soundfonts/FluidR3_GM/" ,
+						// sequenceCallback: function(noteMapTracks, callbackContext) { return noteMapTracks; },
+						// callbackContext: this,
+						// onEnded: function(callbackContext),
+						// pan: [ -0.5, 0.5 ]
+					}
+				}).then(function (response) {
+					console.log(response);
+					if (self.synthControl) {
+						self.synthControl.setTune(renderedABC[0], userAction).then(function (response) {
+							console.log("Audio successfully loaded.")
+							//seekControls.classList.remove("disabled");
+							//seekExplanation();
+						}).catch(function (error) {
+							console.warn("Audio problem:", error);
+						});
+					}
+				}).catch(function (error) {
+					console.warn("Audio problem:", error);
+				});
+			}
+			setTune(false);
+		} else {
+			this.pNode2.innerHTML = "<div class='audio-error'>Audio is not supported in this browser.</div>";
 		}
-
-		ABCJS.renderMidi(this.pNode2, self.tunebookString, {
-			generateDownload: true,
-			downloadLabel: "download midi",
-			inlineControls: {
-				loopToggle: true,
-				startPlaying: self.autoPlay
-			},
-			startingTune: 0
-		});
-		self.domNodes.push(this.pNode2);
+		this.domNodes.push(this.pNode2)
 	}
+	this.domNodes.push(this.pNode);
 
 	self.parentDomNode.addEventListener("resize",function(event) {
 		if(self.parentwidth != self.parentDomNode.clientWidth) {
@@ -109,6 +129,7 @@ ABCJSWidget.prototype.refresh = function(changedTiddlers) {
 	var changedAttributes = this.computeAttributes();
 	if(changedAttributes.tiddler || changedAttributes.midi || changedAttributes.soundfont || changedAttributes.separatelines ||
 		changedAttributes.hints || changedAttributes.autoplay || changedTiddlers[this.tiddler]) {
+		this.synthControl.pause();
 		this.refreshSelf();
 		return true;
 	}
