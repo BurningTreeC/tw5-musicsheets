@@ -99,7 +99,7 @@ Selectively refreshes the widget if needed. Returns true if the widget or any of
 ABCJSWidget.prototype.refresh = function(changedTiddlers) {
 	var changedAttributes = this.computeAttributes();
 	if(changedAttributes.text || changedAttributes.midi || changedAttributes.soundfont || changedAttributes.separatelines || 
-		changedAttributes.sound || changedTiddlers[this.tiddler] || (changedTiddlers["$:/config/musicsheets/program"] && !this.sound)) {
+		changedAttributes.sound || (changedTiddlers["$:/config/musicsheets/program"] && !this.sound)) {
 		this.synthControl.pause();
 		this.refreshSelf();
 		return true;
