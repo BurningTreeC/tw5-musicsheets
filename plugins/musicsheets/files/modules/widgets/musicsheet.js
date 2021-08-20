@@ -44,11 +44,9 @@ ABCJSWidget.prototype.render = function(parent,nextSibling) {
 	if(program === -1) {
 		program = 0;
 	}
-
 	var renderedABC;
 	if(this.text) {
 		var width = parent.clientWidth*2/3;
-
 		renderedABC = ABCJS.renderAbc(this.pNode, "%%staffwidth "+width+"\n"+this.text, {
 			hint_measures: false,
 			responsive: "resize",
