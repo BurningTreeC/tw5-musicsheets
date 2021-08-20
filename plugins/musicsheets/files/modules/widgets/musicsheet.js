@@ -47,12 +47,10 @@ ABCJSWidget.prototype.render = function(parent,nextSibling) {
 
 	var renderedABC;
 	if(this.text) {
-		renderedABC = ABCJS.renderAbc(this.pNode, this.text);
 		var width = parent.clientWidth*2/3;
-		this.parentwidth = parent.clientWidth;
 
-		ABCJS.renderAbc(this.pNode, "%%staffwidth "+width+"\n"+this.text, {
-			hint_measures: true,
+		renderedABC = ABCJS.renderAbc(this.pNode, "%%staffwidth "+width+"\n"+this.text, {
+			hint_measures: false,
 			responsive: "resize",
 			add_classes: true,
 			oneSvgPerLine: self.svgPerLine
@@ -76,17 +74,6 @@ ABCJSWidget.prototype.render = function(parent,nextSibling) {
 		this.domNodes.push(this.pNode2);
 	}
 	this.domNodes.push(this.pNode);
-
-	self.parentDomNode.addEventListener("resize",function(event) {
-		if(self.parentwidth != self.parentDomNode.clientWidth) {
-			var width = parent.clientWidth*2/3;
-			self.parentwidth = parent.clientWidth;
-			ABCJS.renderAbc(self.pNode, "%%staffwidth "+width+"\n"+self.tunebookString);
-		}
-		return true;
-	},false);
-
-	this.renderChildren(self.parentDomNode,nextSibling);
 };
 
 /*
