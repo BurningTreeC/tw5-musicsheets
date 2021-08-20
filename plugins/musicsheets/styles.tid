@@ -7,7 +7,7 @@ tags: $:/tags/Stylesheet
 	height: 26px;
 	padding: 0 5px;
 	border-radius: 3px;
-	background-color: #424242;
+	background-color: <<colour foreground>>;
 	display: flex;
 	align-items: center;
 	box-sizing: border-box;
@@ -30,30 +30,30 @@ tags: $:/tags/Stylesheet
 }
 
 .abcjs-btn g {
-	fill: #f4f4f4;
-	stroke: #f4f4f4;
+	fill: <<colour tiddler-background>>;
+	stroke: <<colour tiddler-background>>;
 }
 
 .abcjs-inline-audio .abcjs-btn:hover g {
-	fill: #cccccc;
-	stroke: #cccccc;
+	fill: <<colour muted-foreground>>;
+	stroke: <<colour muted-foreground>>;
 }
 
 .abcjs-inline-audio .abcjs-midi-selection.abcjs-pushed {
-	border: 1px solid #cccccc;
-	background-color: #666666;
+	border: 1px solid <<colour muted-foreground>>;
+	background-color: <<colour very-muted-foreground>>;
 	box-sizing: border-box;
 }
 
 .abcjs-inline-audio .abcjs-midi-loop.abcjs-pushed {
-	border: 1px solid #cccccc;
-	background-color: #666666;
+	border: 1px solid <<colour muted-foreground>>;
+	background-color: <<colour very-muted-foreground>>;
 	box-sizing: border-box;
 }
 
 .abcjs-inline-audio .abcjs-midi-reset.abcjs-pushed {
-	border: 1px solid #cccccc;
-	background-color: #666666;
+	border: 1px solid <<colour muted-foreground>>;
+	background-color: <<colour very-muted-foreground>>;
 	box-sizing: border-box;
 }
 
@@ -78,10 +78,10 @@ tags: $:/tags/Stylesheet
 }
 
 .abcjs-inline-audio .abcjs-midi-progress-background {
-	background-color: #424242;
+	background-color: <<colour foreground>>;
 	height: 10px;
 	border-radius: 5px;
-	border: 2px solid #cccccc;
+	border: 2px solid <<colour muted-foreground>>;
 	margin: 0 8px 0 15px;
 	position: relative;
 	flex: 1;
@@ -93,7 +93,7 @@ tags: $:/tags/Stylesheet
 	width: 20px;
 	margin-left: -10px; /* half of the width */
 	height: 14px;
-	background-color: #f4f4f4;
+	background-color: <<colour tiddler-background>>;
 	position: absolute;
 	display: inline-block;
 	border-radius: 6px;
@@ -110,12 +110,12 @@ tags: $:/tags/Stylesheet
 	font-family: sans-serif;
 	font-size: 16px;
 	box-sizing: border-box;
-	color: #f4f4f4;
+	color: <<colour tiddler-background>>;
 }
 
 .abcjs-inline-audio .abcjs-tempo-wrapper {
 	font-size: 10px;
-	color: #f4f4f4;
+	color: <<colour tiddler-background>>;
 	box-sizing: border-box;
 	display: flex;
 	align-items: center;
@@ -186,4 +186,8 @@ tags: $:/tags/Stylesheet
 
 .abcjs-css-warning {
 	display: none;
+}
+
+.tc-midi-download a {
+	color: <<colour tiddler-link-foreground>>;
 }
