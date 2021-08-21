@@ -1,0 +1,12 @@
+title: $:/config/ShortcutInfo/
+
+musicsheets-a: Show the A notes
+musicsheets-b: Show the B notes
+musicsheets-c: Show the C notes
+musicsheets-d: Show the D notes
+musicsheets-e: Show the E notes
+musicsheets-f: Show the F notes
+musicsheets-g: Show the G notes
+musicsheets-note-values: Show the note values (lengths)
+musicsheets-rests: Insert a rest
+musicsheets-symbols: Show the musical symbols
