@@ -191,3 +191,8 @@ tags: $:/tags/Stylesheet
 .tc-midi-download a {
 	color: <<colour tiddler-link-foreground>>;
 }
+
+.tc-text-editor-toolbar-item-wrapper .tc-drop-down > p {
+	padding: 0;
+	margin: 0;
+}

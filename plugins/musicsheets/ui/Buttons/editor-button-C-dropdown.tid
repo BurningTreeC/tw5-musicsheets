@@ -13,7 +13,6 @@ title: $:/plugins/BTC/musicsheets/ui/EditorToolbar/dropdown/C
 \end
 \define toolbar-button-note-c-inner()
 <$button tag="a">
-
 <$wikify name="text" text=<<get-note-c>>>
 <$action-sendmessage
 	$message="tm-edit-text-operation"
@@ -21,13 +20,10 @@ title: $:/plugins/BTC/musicsheets/ui/EditorToolbar/dropdown/C
 	text=<<text>>
 />
 </$wikify>
-
 <$action-deletetiddler
 	$tiddler=<<dropdown-state>>
 />
-
 <$text text={{{ [[$(note-c)$]get[caption]] }}}/>
-
 </$button>
 \end
 
