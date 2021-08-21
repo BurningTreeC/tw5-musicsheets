@@ -13,7 +13,6 @@ title: $:/plugins/BTC/musicsheets/ui/EditorToolbar/dropdown/G
 \end
 \define toolbar-button-note-g-inner()
 <$button tag="a">
-
 <$wikify name="text" text=<<get-note-g>>>
 <$action-sendmessage
 	$message="tm-edit-text-operation"
@@ -21,24 +20,15 @@ title: $:/plugins/BTC/musicsheets/ui/EditorToolbar/dropdown/G
 	text=<<text>>
 />
 </$wikify>
-
 <$action-deletetiddler
 	$tiddler=<<dropdown-state>>
 />
-
-<$transclude tiddler=<<note-g>> field="caption" mode="inline">
-
-<$view tiddler=<<note-g>> field="title" />
-
-</$transclude>
-
+<$text text={{{ [[$(note-g)$]get[caption]] }}}/>
 </$button>
 \end
 
 <$list filter="[all[shadows+tiddlers]tag[$:/tags/MusicSheets/G]!is[draft]]" variable="note-g">
-
 <<toolbar-button-note-g-inner>>
-
 </$list>
 
 ----
