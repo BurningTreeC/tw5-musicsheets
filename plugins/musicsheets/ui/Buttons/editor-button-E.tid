@@ -1,0 +1,8 @@
+title: $:/plugins/BTC/musicsheets/ui/EditorToolbar/E
+tags: $:/tags/EditorToolbar
+icon: $:/plugins/BTC/musicsheets/images/E
+condition: [<targetTiddler>type[]] [<targetTiddler>get[type]match[text/vnd.tiddlywiki]] +[first[]]
+dropdown: $:/plugins/BTC/musicsheets/ui/EditorToolbar/dropdown/E
+description: all variants of E
+shortcuts: ((musicsheets-e))
+caption: E

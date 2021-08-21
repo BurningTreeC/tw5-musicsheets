@@ -1,0 +1,9 @@
+title: $:/plugins/BTC/musicsheets/ui/EditorToolbar/B
+tags: $:/tags/EditorToolbar
+icon: $:/plugins/BTC/musicsheets/images/B
+condition: [<targetTiddler>type[]] [<targetTiddler>get[type]match[text/vnd.tiddlywiki]] +[first[]]
+dropdown: $:/plugins/BTC/musicsheets/ui/EditorToolbar/dropdown/B
+description: all variants of B
+shortcuts: ((musicsheets-b))
+caption: B
+list-after: $:/plugins/BTC/musicsheets/ui/EditorToolbar/A

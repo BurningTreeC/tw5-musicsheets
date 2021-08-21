@@ -1,0 +1,8 @@
+title: $:/plugins/BTC/musicsheets/ui/EditorToolbar/C
+tags: $:/tags/EditorToolbar
+icon: $:/plugins/BTC/musicsheets/images/C
+condition: [<targetTiddler>type[]] [<targetTiddler>get[type]match[text/vnd.tiddlywiki]] +[first[]]
+dropdown: $:/plugins/BTC/musicsheets/ui/EditorToolbar/dropdown/C
+description: all variants of C
+shortcuts: ((musicsheets-c))
+caption: C

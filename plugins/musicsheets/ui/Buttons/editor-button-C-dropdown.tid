@@ -1,0 +1,52 @@
+title: $:/plugins/BTC/musicsheets/ui/EditorToolbar/dropdown/C
+
+\define toolbar-button-note-c-inner()
+<$button tag="a">
+
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="insert-text"
+	text={{$(note-c)$}}
+/>
+
+<$action-deletetiddler
+	$tiddler=<<dropdown-state>>
+/>
+
+<$transclude tiddler=<<note-c>> field="caption" mode="inline">
+
+<$view tiddler=<<note-c>> field="title" />
+
+</$transclude>
+
+</$button>
+\end
+
+<$list filter="[all[shadows+tiddlers]tag[$:/tags/MusicSheets/C]!is[draft]]" variable="note-c">
+
+<<toolbar-button-note-c-inner>>
+
+</$list>
+
+----
+
+<$button tag="a">
+
+<$action-sendmessage
+	$message="tm-new-tiddler"
+	tags="$:/tags/MusicSheets/C"
+	caption="this is shown in the menu"
+	text="this is inserted when clicking the button"
+/>
+
+<$action-deletetiddler
+	$tiddler=<<dropdown-state>>
+/>
+
+<em>
+
+<$text text="new entry"/>
+
+</em>
+
+</$button>

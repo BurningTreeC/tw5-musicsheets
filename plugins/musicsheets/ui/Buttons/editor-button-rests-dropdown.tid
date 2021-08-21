@@ -1,0 +1,64 @@
+title: $:/plugins/BTC/musicsheets/ui/EditorToolbar/dropdown/rests
+
+\define get-rest()
+<$list filter="[[$:/state/musicsheets/note-values/]addsuffix<storyTiddler>get[prefix-suffix]] ~[[prefix]]" variable="prefix-suffix">
+	<$list filter="[<prefix-suffix>match[prefix]]" variable="ignore">
+		<$text text={{{ [[$:/state/musicsheets/note-values/]addsuffix<storyTiddler>get[text]] }}}/><$text text={{$(rest)$}}/>
+	</$list>
+	<$list filter="[<prefix-suffix>match[suffix]]" variable="ignore">
+		<$text text={{$(rest)$}}/><$text text={{{ [[$:/state/musicsheets/note-values/]addsuffix<storyTiddler>get[text]] }}}/>
+	</$list>
+</$list>
+\end
+\define toolbar-button-rests-inner()
+<$button tag="a">
+
+<$wikify name="text" text=<<get-rest>>>
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="insert-text"
+	text=<<text>>
+/>
+</$wikify>
+
+<$action-deletetiddler
+	$tiddler=<<dropdown-state>>
+/>
+
+<$transclude tiddler=<<rest>> field="caption" mode="inline">
+
+<$view tiddler=<<rest>> field="title" />
+
+</$transclude>
+
+</$button>
+\end
+
+<$list filter="[all[shadows+tiddlers]tag[$:/tags/MusicSheets/Rests]!is[draft]]" variable="rest">
+
+<<toolbar-button-rests-inner>>
+
+</$list>
+
+----
+
+<$button tag="a">
+
+<$action-sendmessage
+	$message="tm-new-tiddler"
+	tags="$:/tags/MusicSheets/Rests"
+	caption="this is shown in the menu"
+	text="this is inserted when clicking the button"
+/>
+
+<$action-deletetiddler
+	$tiddler=<<dropdown-state>>
+/>
+
+<em>
+
+<$text text="new entry"/>
+
+</em>
+
+</$button>

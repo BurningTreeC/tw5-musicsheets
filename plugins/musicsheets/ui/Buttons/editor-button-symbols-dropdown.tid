@@ -1,0 +1,52 @@
+title: $:/plugins/BTC/musicsheets/ui/EditorToolbar/dropdown/symbols
+
+\define toolbar-button-symbols-inner()
+<$button tag="a">
+
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="insert-text"
+	text={{$(symbol)$}}
+/>
+
+<$action-deletetiddler
+	$tiddler=<<dropdown-state>>
+/>
+
+<$transclude tiddler=<<symbol>> field="caption" mode="inline">
+
+<$view tiddler=<<symbol>> field="title" />
+
+</$transclude>
+
+</$button>
+\end
+
+<$list filter="[all[shadows+tiddlers]tag[$:/tags/MusicSheets/Symbols]!is[draft]]" variable="symbol">
+
+<<toolbar-button-symbols-inner>>
+
+</$list>
+
+----
+
+<$button tag="a">
+
+<$action-sendmessage
+	$message="tm-new-tiddler"
+	tags="$:/tags/MusicSheets/Symbols"
+	caption="this is shown in the menu"
+	text="this is inserted when clicking the button"
+/>
+
+<$action-deletetiddler
+	$tiddler=<<dropdown-state>>
+/>
+
+<em>
+
+<$text text="new entry"/>
+
+</em>
+
+</$button>
