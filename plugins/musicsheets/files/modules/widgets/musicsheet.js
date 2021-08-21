@@ -96,7 +96,9 @@ ABCJSWidget.prototype.refresh = function(changedTiddlers) {
 	var changedAttributes = this.computeAttributes();
 	if(changedAttributes.text || changedAttributes.midi || changedAttributes.separatelines || 
 		changedAttributes.sound || (changedTiddlers["$:/config/musicsheets/program"] && !this.sound)) {
-		this.synthControl.pause();
+		if(this.synthControl) {
+			this.synthControl.pause();
+		}
 		this.refreshSelf();
 		return true;
 	}
