@@ -2,6 +2,6 @@
 	"title": "$:/plugins/BTC/musicsheets",
 	"description": "Music scores in abc notation for TiddlyWiki5",
 	"author": "Simon Huber",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"list": "readme usage license"
 }
