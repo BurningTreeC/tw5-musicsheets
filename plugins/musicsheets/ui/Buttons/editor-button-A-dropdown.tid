@@ -27,7 +27,7 @@ title: $:/plugins/BTC/musicsheets/ui/EditorToolbar/dropdown/A
 </$button>
 \end
 
-<$list filter="[all[shadows+tiddlers]tag[$:/tags/MusicSheets/A]!is[draft]each[category]]">
+<$list filter="[all[shadows+tiddlers]tag[$:/tags/MusicSheets/A]!is[draft]each[category]!sort[category]]">
 <div class="tc-dropdown-item">
 <$text text={{!!category}}/>
 </div>
