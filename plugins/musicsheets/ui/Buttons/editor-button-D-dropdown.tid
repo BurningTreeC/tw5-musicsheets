@@ -1,44 +1,10 @@
 title: $:/plugins/BTC/musicsheets/ui/EditorToolbar/dropdown/D
 
-\define get-note-d()
-\whitespace trim
-<$list filter="[{!!category}!match[Chords]]">
-	<$list filter="[[$:/state/musicsheets/note-values/]addsuffix<storyTiddler>get[prefix-suffix]] ~[[prefix]]" variable="prefix-suffix">
-		<$list filter="[<prefix-suffix>match[prefix]]" variable="ignore">
-			<$text text={{{ [[$:/state/musicsheets/note-values/]addsuffix<storyTiddler>get[text]] }}}/><$text text={{$(note-d)$}}/>
-		</$list>
-		<$list filter="[<prefix-suffix>match[suffix]]" variable="ignore">
-			<$text text={{$(note-d)$}}/><$text text={{{ [[$:/state/musicsheets/note-values/]addsuffix<storyTiddler>get[text]] }}}/>
-		</$list>
-	</$list>
-</$list>
-<$list filter="[{!!category}match[Chords]]">
-	<$text text={{$(note-d)$}}/>
-</$list>
-\end
-\define toolbar-button-note-d-inner()
-<$button tag="a">
-<$wikify name="text" text=<<get-note-d>>>
-<$action-sendmessage
-	$message="tm-edit-text-operation"
-	$param="insert-text"
-	text=<<text>>
-/>
-</$wikify>
-<$action-deletetiddler
-	$tiddler=<<dropdown-state>>
-/>
-<$text text={{{ [[$(note-d)$]get[caption]] }}}/>
-</$button>
-\end
-
 <$list filter="[all[shadows+tiddlers]tag[$:/tags/MusicSheets/D]!is[draft]each[category]!sort[category]]">
 <div class="tc-dropdown-item">
 <$text text={{!!category}}/>
 </div>
-<$list filter="[all[shadows+tiddlers]tag[$:/tags/MusicSheets/D]!is[draft]category{!!category}sort[caption]]" variable="note-d">
-<<toolbar-button-note-d-inner>>
-</$list>
+<$macrocall $name="list-tagged-draggable" tag="$:/tags/MusicSheets/D" subFilter="!is[draft]category{!!category}" itemTemplate="$:/plugins/BTC/musicsheets/ui/Templates/toolbar-item-template"/>
 </$list>
 
 ----

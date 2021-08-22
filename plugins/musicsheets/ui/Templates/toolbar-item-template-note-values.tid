@@ -1,0 +1,13 @@
+title: $:/plugins/BTC/musicsheets/ui/Templates/toolbar-item-template-note-values
+
+\whitespace trim
+<$linkcatcher actions="""
+<$action-setfield $tiddler={{{ [[$:/state/musicsheets/note-values/]addsuffix<storyTiddler>] }}} text={{$(note-value)$}} prefix-suffix={{$(note-value)$!!prefix-suffix}}/>
+
+<$action-deletetiddler
+	$tiddler=<<dropdown-state>>
+/>
+
+""">
+<$link><$text text={{{ [<currentTiddler>get[caption]] }}}/></$link>
+</$linkcatcher>

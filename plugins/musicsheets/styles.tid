@@ -197,6 +197,10 @@ tags: $:/tags/Stylesheet
 	margin: 0;
 }
 
+.tc-text-editor-toolbar-item-wrapper button.tc-musicsheets-toolbar-button + .tc-popup .tc-drop-down a.tc-tiddlylink {
+	font-weight: normal;
+}
+
 @media print {
 	.tc-midi-download, .tc-playback-controls {
 		display: none;

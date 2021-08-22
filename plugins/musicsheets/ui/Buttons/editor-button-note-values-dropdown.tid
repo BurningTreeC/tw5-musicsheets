@@ -1,28 +1,6 @@
 title: $:/plugins/BTC/musicsheets/ui/EditorToolbar/dropdown/note-value
 
-\define toolbar-button-note-values-inner()
-<$button tag="a">
-
-<$action-setfield $tiddler={{{ [[$:/state/musicsheets/note-values/]addsuffix<storyTiddler>] }}} text={{$(note-value)$}} prefix-suffix={{$(note-value)$!!prefix-suffix}}/>
-
-<$action-deletetiddler
-	$tiddler=<<dropdown-state>>
-/>
-
-<$transclude tiddler=<<note-value>> field="caption" mode="inline">
-
-<$view tiddler=<<note-value>> field="title" />
-
-</$transclude>
-
-</$button>
-\end
-
-<$list filter="[all[shadows+tiddlers]tag[$:/tags/MusicSheets/NoteValues]!is[draft]]" variable="note-value">
-
-<<toolbar-button-note-values-inner>>
-
-</$list>
+<$macrocall $name="list-tagged-draggable" tag="$:/tags/MusicSheets/NoteValues" subFilter="!is[draft]" itemTemplate="$:/plugins/BTC/musicsheets/ui/Templates/toolbar-item-template-note-values"/>
 
 ----
 
