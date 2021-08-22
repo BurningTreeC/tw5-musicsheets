@@ -2,9 +2,7 @@ title: $:/plugins/BTC/musicsheets/ui/EditorToolbar/dropdown/C
 
 \define get-note-c()
 \whitespace trim
-<$list filter="[{!!category}!match[Chords]]" emptyMessage="""
-	<$text text={{$(note-c)$}}/>
-""">
+<$list filter="[{!!category}!match[Chords]]">
 	<$list filter="[[$:/state/musicsheets/note-values/]addsuffix<storyTiddler>get[prefix-suffix]] ~[[prefix]]" variable="prefix-suffix">
 		<$list filter="[<prefix-suffix>match[prefix]]" variable="ignore">
 			<$text text={{{ [[$:/state/musicsheets/note-values/]addsuffix<storyTiddler>get[text]] }}}/><$text text={{$(note-c)$}}/>
@@ -13,6 +11,9 @@ title: $:/plugins/BTC/musicsheets/ui/EditorToolbar/dropdown/C
 			<$text text={{$(note-c)$}}/><$text text={{{ [[$:/state/musicsheets/note-values/]addsuffix<storyTiddler>get[text]] }}}/>
 		</$list>
 	</$list>
+</$list>
+<$list filter="[{!!category}match[Chords]]">
+	<$text text={{$(note-c)$}}/>
 </$list>
 \end
 \define toolbar-button-note-c-inner()
