@@ -2,23 +2,27 @@ title: $:/plugins/BTC/musicsheets/ui/EditorToolbar/dropdown/symbols
 
 \define toolbar-button-symbols-inner()
 <$button tag="a">
-
+<$list filter="[[$(symbol)$]!has[wrap-selection]]">
 <$action-sendmessage
 	$message="tm-edit-text-operation"
 	$param="insert-text"
 	text={{$(symbol)$}}
 />
-
+</$list>
+<$list filter="[[$(symbol)$]get[wrap-selection]match[true]]">
+<$action-sendmessage
+	$message="tm-edit-text-operation"
+	$param="wrap-selection"
+	prefix={{$(symbol)$!!prefix}}
+	suffix={{$(symbol)$!!suffix}}
+/>
+</$list>
 <$action-deletetiddler
 	$tiddler=<<dropdown-state>>
 />
-
 <$transclude tiddler=<<symbol>> field="caption" mode="inline">
-
 <$view tiddler=<<symbol>> field="title" />
-
 </$transclude>
-
 </$button>
 \end
 
