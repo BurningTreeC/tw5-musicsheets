@@ -27,8 +27,13 @@ title: $:/plugins/BTC/musicsheets/ui/EditorToolbar/dropdown/D
 </$button>
 \end
 
-<$list filter="[all[shadows+tiddlers]tag[$:/tags/MusicSheets/D]!is[draft]]" variable="note-d">
+<$list filter="[all[shadows+tiddlers]tag[$:/tags/MusicSheets/D]!is[draft]each[category]]">
+<div class="tc-dropdown-item">
+<$text text={{!!category}}/>
+</div>
+<$list filter="[all[shadows+tiddlers]tag[$:/tags/MusicSheets/D]!is[draft]category{!!category}sort[caption]]" variable="note-d">
 <<toolbar-button-note-d-inner>>
+</$list>
 </$list>
 
 ----

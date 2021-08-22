@@ -27,8 +27,13 @@ title: $:/plugins/BTC/musicsheets/ui/EditorToolbar/dropdown/F
 </$button>
 \end
 
-<$list filter="[all[shadows+tiddlers]tag[$:/tags/MusicSheets/F]!is[draft]]" variable="note-f">
+<$list filter="[all[shadows+tiddlers]tag[$:/tags/MusicSheets/F]!is[draft]each[category]]">
+<div class="tc-dropdown-item">
+<$text text={{!!category}}/>
+</div>
+<$list filter="[all[shadows+tiddlers]tag[$:/tags/MusicSheets/F]!is[draft]category{!!category}sort[caption]]" variable="note-f">
 <<toolbar-button-note-f-inner>>
+</$list>
 </$list>
 
 ----
