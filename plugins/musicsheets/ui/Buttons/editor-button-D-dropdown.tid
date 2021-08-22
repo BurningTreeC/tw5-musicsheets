@@ -2,12 +2,16 @@ title: $:/plugins/BTC/musicsheets/ui/EditorToolbar/dropdown/D
 
 \define get-note-d()
 \whitespace trim
-<$list filter="[[$:/state/musicsheets/note-values/]addsuffix<storyTiddler>get[prefix-suffix]] ~[[prefix]]" variable="prefix-suffix">
-	<$list filter="[<prefix-suffix>match[prefix]]" variable="ignore">
-		<$text text={{{ [[$:/state/musicsheets/note-values/]addsuffix<storyTiddler>get[text]] }}}/><$text text={{$(note-d)$}}/>
-	</$list>
-	<$list filter="[<prefix-suffix>match[suffix]]" variable="ignore">
-		<$text text={{$(note-d)$}}/><$text text={{{ [[$:/state/musicsheets/note-values/]addsuffix<storyTiddler>get[text]] }}}/>
+<$list filter="[{!!category}!match[Chords]]" emptyMessage="""
+	<$text text={{$(note-d)$}}/>
+""">
+	<$list filter="[[$:/state/musicsheets/note-values/]addsuffix<storyTiddler>get[prefix-suffix]] ~[[prefix]]" variable="prefix-suffix">
+		<$list filter="[<prefix-suffix>match[prefix]]" variable="ignore">
+			<$text text={{{ [[$:/state/musicsheets/note-values/]addsuffix<storyTiddler>get[text]] }}}/><$text text={{$(note-d)$}}/>
+		</$list>
+		<$list filter="[<prefix-suffix>match[suffix]]" variable="ignore">
+			<$text text={{$(note-d)$}}/><$text text={{{ [[$:/state/musicsheets/note-values/]addsuffix<storyTiddler>get[text]] }}}/>
+		</$list>
 	</$list>
 </$list>
 \end
