@@ -66,9 +66,13 @@ ABCJSWidget.prototype.render = function(parent,nextSibling) {
 		this.pNode2.className = "tc-playback-controls";
 		parent.insertBefore(this.pNode2,nextSibling);
 		if(ABCJS.synth.supportsAudio()) {
-			this.synthControl = new ABCJS.synth.SynthController();
-			this.synthControl.load(this.pNode2, null, {displayLoop: true, displayRestart: true, displayPlay: true, displayProgress: true, displayWarp: true});
-			this.synthControl.setTune(renderedABC[0], false, { program: program });
+			try {
+				this.synthControl = new ABCJS.synth.SynthController();
+				this.synthControl.load(this.pNode2, null, {displayLoop: true, displayRestart: true, displayPlay: true, displayProgress: true, displayWarp: true});
+				this.synthControl.setTune(renderedABC[0], false, { program: program });
+			} catch(e) {
+				
+			}
 		} else {
 			this.pNode2.innerHTML = "<div class='audio-error'>Audio is not supported in this browser.</div>";
 		}

@@ -196,3 +196,9 @@ tags: $:/tags/Stylesheet
 	padding: 0;
 	margin: 0;
 }
+
+@media print {
+	.tc-midi-download, .tc-playback-controls {
+		display: none;
+	}
+}
