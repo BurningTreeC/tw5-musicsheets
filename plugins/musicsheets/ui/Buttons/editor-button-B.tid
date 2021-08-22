@@ -7,3 +7,4 @@ description: all variants of B
 shortcuts: ((musicsheets-b))
 caption: B
 list-after: $:/plugins/BTC/musicsheets/ui/EditorToolbar/A
+button-classes: tc-musicsheets-toolbar-button

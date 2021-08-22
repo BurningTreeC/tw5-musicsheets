@@ -6,3 +6,4 @@ dropdown: $:/plugins/BTC/musicsheets/ui/EditorToolbar/dropdown/C
 description: all variants of C
 shortcuts: ((musicsheets-c))
 caption: C
+button-classes: tc-musicsheets-toolbar-button

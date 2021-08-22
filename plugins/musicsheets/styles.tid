@@ -192,7 +192,7 @@ tags: $:/tags/Stylesheet
 	color: <<colour tiddler-link-foreground>>;
 }
 
-.tc-text-editor-toolbar-item-wrapper .tc-drop-down > p {
+.tc-text-editor-toolbar-item-wrapper button.tc-musicsheets-toolbar-button + .tc-popup .tc-drop-down > p {
 	padding: 0;
 	margin: 0;
 }
