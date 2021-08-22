@@ -49,6 +49,7 @@ title: $:/plugins/BTC/musicsheets/ui/EditorToolbar/dropdown/symbols
 	tags="$:/tags/MusicSheets/Symbols"
 	caption="this is shown in the menu"
 	text="this is inserted when clicking the button"
+	category="'Symbols' or 'Tune Header'"
 />
 
 <$action-deletetiddler
