@@ -1,0 +1,8 @@
+title: $:/plugins/BTC/musicsheets/ui/Symbols/triplet
+tags: $:/tags/MusicSheets/Symbols
+caption: (3 - Triplet (wrap selection)
+category: Symbols
+description: Prefix notes with (3
+wrap-selection: true
+prefix: (3
+suffix:

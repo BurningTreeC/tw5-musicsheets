@@ -1,0 +1,8 @@
+title: $:/plugins/BTC/musicsheets/ui/Symbols/sextuplet
+tags: $:/tags/MusicSheets/Symbols
+caption: (6 - Sextuplet (wrap selection)
+category: Symbols
+description: Prefix notes with (6
+wrap-selection: true
+prefix: (6
+suffix:

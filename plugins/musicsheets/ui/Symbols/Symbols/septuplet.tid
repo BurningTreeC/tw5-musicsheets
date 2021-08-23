@@ -1,0 +1,8 @@
+title: $:/plugins/BTC/musicsheets/ui/Symbols/septuplet
+tags: $:/tags/MusicSheets/Symbols
+caption: (7 - Septuplet (wrap selection)
+category: Symbols
+description: Prefix notes with (7
+wrap-selection: true
+prefix: (7
+suffix:

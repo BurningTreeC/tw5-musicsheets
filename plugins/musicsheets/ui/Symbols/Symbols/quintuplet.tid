@@ -1,0 +1,8 @@
+title: $:/plugins/BTC/musicsheets/ui/Symbols/quintuplet
+tags: $:/tags/MusicSheets/Symbols
+caption: (5 - Quintuplet (wrap selection)
+category: Symbols
+description: Prefix notes with (5
+wrap-selection: true
+prefix: (5
+suffix:

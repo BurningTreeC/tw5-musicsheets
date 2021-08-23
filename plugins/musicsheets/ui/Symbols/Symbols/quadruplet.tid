@@ -1,0 +1,8 @@
+title: $:/plugins/BTC/musicsheets/ui/Symbols/quadruplet
+tags: $:/tags/MusicSheets/Symbols
+caption: (4 - Quadruplet (wrap selection)
+category: Symbols
+description: Prefix notes with (4
+wrap-selection: true
+prefix: (4
+suffix:

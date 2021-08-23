@@ -1,0 +1,8 @@
+title: $:/plugins/BTC/musicsheets/ui/Symbols/nonuplet
+tags: $:/tags/MusicSheets/Symbols
+caption: (9 - Nonuplet (wrap selection)
+category: Symbols
+description: Prefix notes with (9
+wrap-selection: true
+prefix: (9
+suffix:

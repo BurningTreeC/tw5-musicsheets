@@ -1,0 +1,8 @@
+title: $:/plugins/BTC/musicsheets/ui/Symbols/general-tuplet
+tags: $:/tags/MusicSheets/Symbols
+caption: (p:q:r - General tuplet (wrap selection)
+category: Symbols
+description: put p notes into the time of q for the next r notes
+wrap-selection: true
+prefix: (p:q:r
+suffix:

@@ -1,0 +1,8 @@
+title: $:/plugins/BTC/musicsheets/ui/Symbols/grace-notes
+tags: $:/tags/MusicSheets/Symbols
+caption: {} grace notes - (wrap selection)
+category: Symbols
+description: Wrap notes within a {}
+wrap-selection: true
+prefix: {
+suffix: }

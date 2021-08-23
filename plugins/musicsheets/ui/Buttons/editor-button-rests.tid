@@ -2,7 +2,7 @@ title: $:/plugins/BTC/musicsheets/ui/EditorToolbar/rests
 tags: $:/tags/EditorToolbar
 icon: $:/plugins/BTC/musicsheets/images/rest
 condition: [<targetTiddler>type[]] [<targetTiddler>get[type]match[text/vnd.tiddlywiki]] +[first[]]
-description: all variants of rest
+description: insert a rest
 shortcuts: ((musicsheets-rests))
 caption: rest
 
