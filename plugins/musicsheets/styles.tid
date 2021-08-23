@@ -7,7 +7,7 @@ tags: $:/tags/Stylesheet
 	height: 26px;
 	padding: 0 5px;
 	border-radius: 3px;
-	background-color: <<colour foreground>>;
+	background-color: <<colour muted-foreground>>;
 	display: flex;
 	align-items: center;
 	box-sizing: border-box;
@@ -35,8 +35,8 @@ tags: $:/tags/Stylesheet
 }
 
 .abcjs-inline-audio .abcjs-btn:hover g {
-	fill: <<colour muted-foreground>>;
-	stroke: <<colour muted-foreground>>;
+	fill: <<colour foreground>>;
+	stroke: <<colour foreground>>;
 }
 
 .abcjs-inline-audio .abcjs-midi-selection.abcjs-pushed {
