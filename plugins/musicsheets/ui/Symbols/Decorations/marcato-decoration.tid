@@ -2,5 +2,6 @@ title: $:/plugins/BTC/musicsheets/ui/Symbols/marcato
 tags: $:/tags/MusicSheets/Symbols
 caption: !marcato! Marcato
 category: Decorations
+description: ^ above note
 
 !marcato!
