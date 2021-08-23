@@ -10,3 +10,53 @@ caption: Music
 		<option value=<<program>>>{{{ [<program>search-replace:g[_],[ ]] }}}</option>
 	</$list>
 </$select>
+
+<hr>
+
+!!! Filter musicsheets
+
+//Filter by//
+
+<$select tiddler="$:/state/musicsheets/filter">
+	<option value=""></option>
+	<option value="T:">Title</option>
+	<option value="C:">Composer</option>
+	<option value="K:">Key</option>
+	<option value="Q:">Tempo</option>
+</$select>
+
+//Search for//
+
+<$edit-text tag="input" tiddler="$:/state/musicsheets/search" default="" placeholder="search"/>
+
+//Results://
+
+<$set name="filterWord" value={{$:/state/musicsheets/filter}}>
+
+<$set name="searchRegexp" value={{{ [[^(?!^]addsuffix<filterWord>addsuffix[.*\n).*]] }}}>
+
+<$set name="searchWord" value={{$:/state/musicsheets/search}}>
+
+<$list filter="[<filterWord>!match[]]">
+
+<$list filter="[<searchWord>!match[]]">
+
+<$list filter="[all[tiddlers]]" variable="tiddler">
+
+<$list filter="[<tiddler>get[text]search-replace:mg:regexp<searchRegexp>,[]search-replace<filterWord>,[]search<searchWord>]">
+
+<$link to=<<tiddler>>><$text text=<<tiddler>>/></$link>
+
+</$list>
+
+</$list>
+
+</$list>
+
+</$list>
+
+</$set>
+
+</$set>
+
+</$set>
