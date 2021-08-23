@@ -1,5 +1,7 @@
 title: $:/plugins/BTC/musicsheets/ui/Symbols/mediumphrase-decoration
 tags: $:/tags/MusicSheets/Symbols
 category: Decorations
-caption:
-description: 
+caption: !mediumphrase!
+description: vertical line on the upper part of the staff, extending down to the centre line
+
+!mediumphrase!
