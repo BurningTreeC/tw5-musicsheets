@@ -1,5 +1,7 @@
 title: $:/plugins/BTC/musicsheets/ui/Symbols/downbow-decoration
 tags: $:/tags/MusicSheets/Symbols
 category: Decorations
-caption:
-description: 
+caption: !downbow!
+description: squared n mark
+
+!downbow!

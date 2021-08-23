@@ -1,5 +1,7 @@
 title: $:/plugins/BTC/musicsheets/ui/Symbols/dacoda-decoration
 tags: $:/tags/MusicSheets/Symbols
 category: Decorations
-caption:
-description: 
+caption: !dacoda!
+description: the word "Da" followed by a Coda sign
+
+!dacoda!
