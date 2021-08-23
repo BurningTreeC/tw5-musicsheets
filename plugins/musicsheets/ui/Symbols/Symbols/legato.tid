@@ -2,6 +2,7 @@ title: $:/plugins/BTC/musicsheets/ui/Symbols/legato
 tags: $:/tags/MusicSheets/Symbols
 caption: () legato - (wrap selection)
 category: Symbols
+description: Wrap notes within a legato ()
 wrap-selection: true
 prefix: (
 suffix: )

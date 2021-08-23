@@ -2,5 +2,6 @@ title: $:/plugins/BTC/musicsheets/ui/Symbols/note-heads-triangle
 tags: $:/tags/MusicSheets/Symbols
 caption: triangle (in a K: and/or V: element)
 category: Note Heads
+description: Triangle note heads
 
 style=triangle

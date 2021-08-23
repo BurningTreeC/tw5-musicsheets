@@ -2,5 +2,6 @@ title: $:/plugins/BTC/musicsheets/ui/Symbols/stop-repeat
 tags: $:/tags/MusicSheets/Symbols
 caption: :| Stop repeat
 category: Symbols
+description: Insert a "stop repeat" symbol
 
 :|
