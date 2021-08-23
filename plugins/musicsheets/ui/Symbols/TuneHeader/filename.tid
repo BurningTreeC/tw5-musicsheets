@@ -2,5 +2,6 @@ title: $:/plugins/BTC/musicsheets/ui/Symbols/FileName
 tags: $:/tags/MusicSheets/TuneHeader
 caption: F: File Name
 category: Tune Header
+description: i.e. where the either the abc tune or the abc file can be found on the web
 
 F:

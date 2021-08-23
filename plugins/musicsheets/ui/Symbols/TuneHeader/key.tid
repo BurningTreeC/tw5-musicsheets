@@ -2,5 +2,6 @@ title: $:/plugins/BTC/musicsheets/ui/Symbols/Key
 tags: $:/tags/MusicSheets/TuneHeader
 caption: K: Key
 category: Tune Header
+description: The key signature should be specified with a capital letter (A-G) which may be followed by a # or b for sharp or flat respectively. In addition the mode should be specified (when no mode is indicated, major is assumed).
 
 K:

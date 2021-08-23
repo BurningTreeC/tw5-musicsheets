@@ -2,5 +2,6 @@ title: $:/plugins/BTC/musicsheets/ui/Symbols/Origin
 tags: $:/tags/MusicSheets/TuneHeader
 caption: O: (Geographical) Origin
 category: Tune Header
+description: The O: field indicates the geographical origin(s) of a tune.
 
 O:

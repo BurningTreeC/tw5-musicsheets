@@ -2,5 +2,6 @@ title: $:/plugins/BTC/musicsheets/ui/Symbols/TuneReferenceNumber
 tags: $:/tags/MusicSheets/TuneHeader
 caption: X: Tune Reference Number
 category: Tune Header
+description: The X: (reference number) field is used to assign to each tune within a tunebook a unique reference number (a positive integer), for example: X:23. The X: field is also used to indicate the start of the tune (and hence the tune header), so all tunes must start with an X: field and only one X: field is allowed per tune.
 
 X:

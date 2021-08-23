@@ -2,5 +2,6 @@ title: $:/plugins/BTC/musicsheets/ui/Symbols/NoteLength
 tags: $:/tags/MusicSheets/TuneHeader
 caption: L: Default Note Length
 category: Tune Header
+description: The L: field specifies the unit note length - the length of a note as represented by a single letter in abc
 
 L:

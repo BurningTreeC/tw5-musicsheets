@@ -2,5 +2,6 @@ title: $:/plugins/BTC/musicsheets/ui/Symbols/Area
 tags: $:/tags/MusicSheets/TuneHeader
 caption: A: (Geographical) Area
 category: Tune Header
+description: Historically, the A: field has been used to contain area information (more specific details of the tune origin). However this field is now deprecated and it is recommended that such information be included in the O: field.
 
 A:

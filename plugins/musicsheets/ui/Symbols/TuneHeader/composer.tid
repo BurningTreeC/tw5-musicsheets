@@ -2,5 +2,6 @@ title: $:/plugins/BTC/musicsheets/ui/Symbols/Composer
 tags: $:/tags/MusicSheets/TuneHeader
 caption: C: Composer
 category: Tune Header
+description: The C: field is used to indicate the composer(s).
 
 C:

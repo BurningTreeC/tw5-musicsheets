@@ -2,5 +2,6 @@ title: $:/plugins/BTC/musicsheets/ui/Symbols/TranscriptionNote
 tags: $:/tags/MusicSheets/TuneHeader
 caption: Z: Transcription Note
 category: Tune Header
+description: Typically the Z: field contains the name(s) of the person(s) who transcribed the tune into abc, and possibly some contact information, e.g. an (e-)mail address or homepage URL.
 
 Z:
