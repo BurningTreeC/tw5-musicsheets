@@ -1,0 +1,9 @@
+title: $:/plugins/BTC/musicsheets/ui/EditorToolbar/clefs
+tags: $:/tags/EditorToolbar
+icon: $:/plugins/BTC/musicsheets/images/clefs
+condition: [<targetTiddler>type[]] [<targetTiddler>get[type]match[text/vnd.tiddlywiki]] +[first[]]
+dropdown: $:/plugins/BTC/musicsheets/ui/EditorToolbar/dropdown/clefs
+description: all clefs
+shortcuts: ((musicsheets-clefs))
+caption: Clefs
+button-classes: tc-musicsheets-toolbar-button

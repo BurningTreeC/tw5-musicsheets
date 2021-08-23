@@ -7,6 +7,10 @@ musicsheets-d: Show the D notes
 musicsheets-e: Show the E notes
 musicsheets-f: Show the F notes
 musicsheets-g: Show the G notes
+musicsheets-clefs: Show the clefs
+musicsheets-decorations: Show the musical decorations
+musicsheets-note-heads: Show the note heads
 musicsheets-note-values: Show the note values (lengths)
 musicsheets-rests: Insert a rest
 musicsheets-symbols: Show the musical symbols
+musicsheets-tune-header: Show the tune header dropdown

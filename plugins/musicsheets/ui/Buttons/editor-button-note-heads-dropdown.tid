@@ -1,0 +1,35 @@
+title: $:/plugins/BTC/musicsheets/ui/EditorToolbar/dropdown/note-heads
+
+<$list filter="[all[shadows+tiddlers]tag[$:/tags/MusicSheets/NoteHeads]!is[draft]each[category]]">
+
+<div class="tc-dropdown-item">
+<$text text={{!!category}}/>
+</div>
+
+<$macrocall $name="list-tagged-draggable" tag="$:/tags/MusicSheets/NoteHeads" subFilter="!is[draft]category{!!category}" itemTemplate="$:/plugins/BTC/musicsheets/ui/Templates/toolbar-item-template-symbols"/>
+
+</$list>
+
+----
+
+<$button tag="a">
+
+<$action-sendmessage
+	$message="tm-new-tiddler"
+	tags="$:/tags/MusicSheets/NoteHeads"
+	caption="this is shown in the menu"
+	text="this is inserted when clicking the button"
+	category="Note Heads"
+/>
+
+<$action-deletetiddler
+	$tiddler=<<dropdown-state>>
+/>
+
+<em>
+
+<$text text="new entry"/>
+
+</em>
+
+</$button>
