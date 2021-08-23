@@ -54,12 +54,14 @@ ABCJSWidget.prototype.render = function(parent,nextSibling) {
 			add_classes: true,
 			oneSvgPerLine: self.svgPerLine
 		});
-		var midi = ABCJS.synth.getMidiFile(renderedABC[0], { chordsOff: true, midiOutputType: "link" });
-		this.midiNode = this.document.createElement("div");
-		this.midiNode.innerHTML = midi;
-		this.midiNode.className = "tc-midi-download";
-		parent.insertBefore(this.midiNode,nextSibling);
-		this.domNodes.push(this.midiNode);
+		if(this.midiLink !== false) {
+			var midi = ABCJS.synth.getMidiFile(renderedABC[0], { chordsOff: true, midiOutputType: "link" });
+			this.midiNode = this.document.createElement("div");
+			this.midiNode.innerHTML = midi;
+			this.midiNode.className = "tc-midi-download";
+			parent.insertBefore(this.midiNode,nextSibling);
+			this.domNodes.push(this.midiNode);
+		}
 	}
 	if(renderedABC && this.renderMidi) {
 		this.pNode2 = this.document.createElement("div");
@@ -90,6 +92,7 @@ ABCJSWidget.prototype.execute = function() {
 	this.svgPerLine = this.getAttribute("separatelines","no") === "yes";
 	this.sound = this.getAttribute("sound");
 	this.program = this.sound || this.wiki.getTiddlerText("$:/config/musicsheets/program") || "acoustic_grand_piano";
+	this.midiLink = this.getAttribute("midi-link","yes") === "yes";
 	this.makeChildWidgets();
 };
 
