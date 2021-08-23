@@ -1,0 +1,5 @@
+title: $:/plugins/BTC/musicsheets/ui/Stamps/MYABC-macro/suffix
+
+
+\end
+<$musicsheet text=<<myabc>> midi="yes"/>
