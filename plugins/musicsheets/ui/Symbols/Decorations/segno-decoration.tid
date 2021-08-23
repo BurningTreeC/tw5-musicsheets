@@ -1,5 +1,7 @@
 title: $:/plugins/BTC/musicsheets/ui/Symbols/segno-decoration
 tags: $:/tags/MusicSheets/Symbols
 category: Decorations
-caption:
-description: 
+caption: !segno!
+description: 2 ornate s-like symbols separated by a diagonal line
+
+!segno!

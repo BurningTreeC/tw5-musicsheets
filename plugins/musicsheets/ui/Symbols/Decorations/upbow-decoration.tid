@@ -1,5 +1,7 @@
 title: $:/plugins/BTC/musicsheets/ui/Symbols/upbow-decoration
 tags: $:/tags/MusicSheets/Symbols
 category: Decorations
-caption:
-description: 
+caption: !upbow!
+description: V mark
+
+!upbow!

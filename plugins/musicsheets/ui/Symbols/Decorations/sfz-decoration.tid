@@ -1,5 +1,7 @@
 title: $:/plugins/BTC/musicsheets/ui/Symbols/sfz-decoration
 tags: $:/tags/MusicSheets/Symbols
 category: Decorations
-caption:
-description: 
+caption: !sfz! - sforzando, sforzato
+description: dynamic mark for "sforzando, sforzato"
+
+!sfz!

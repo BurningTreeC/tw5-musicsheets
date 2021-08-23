@@ -1,5 +1,7 @@
 title: $:/plugins/BTC/musicsheets/ui/Symbols/start-diminuendo1-decoration
 tags: $:/tags/MusicSheets/Symbols
 category: Decorations
-caption:
-description: 
+caption: !diminuendo(!
+description: start of a > diminuendo mark
+
+!diminuendo(!
