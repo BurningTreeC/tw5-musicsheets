@@ -2,7 +2,7 @@ title: $:/plugins/BTC/musicsheets/ui/Templates/toolbar-item-template-note-values
 
 \whitespace trim
 <$linkcatcher actions="""
-<$action-setfield $tiddler={{{ [[$:/state/musicsheets/note-values/]addsuffix<storyTiddler>] }}} text={{{ [<currentTiddler>get[text]] }}} prefix-suffix={{{ [<currentTiddler>get[prefix-suffix]] }}}/>
+<$action-setfield $tiddler={{{ [[$:/state/musicsheets/note-values/]addsuffix<storyTiddler>] }}} text={{{ [<currentTiddler>get[text]] }}} prefix-suffix={{{ [<currentTiddler>get[prefix-suffix]] }}} caption={{{ [<currentTiddler>get[caption]] }}}/>
 
 <$action-deletetiddler
 	$tiddler=<<dropdown-state>>
