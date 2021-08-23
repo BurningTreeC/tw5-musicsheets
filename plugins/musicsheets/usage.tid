@@ -2,10 +2,14 @@ title: $:/plugins/BTC/musicsheets/usage
 
 !!! See the [ext[abcjs Documentation|https://paulrosen.github.io/abcjs/overview/abc-notation.html]] about abc Notation
 
+!!! See also [ext[the abc notation website's learn section|https://abcnotation.com/learn]]
+
+!!! See also [ext[the abc notation standard|https://abcnotation.com/wiki/abc:standard:v2.1]]
+
 !!! The `musicsheet` widget
 
 |attribute |purpose |h
-|tiddler |The title of the tiddler containing notes in ''abc notation'' |
+|text |The text in ''abc notation'' |
 |midi |"yes" or "no" - defines if the midi player is shown or not |
 |sound |can be one of the [[supported sounds|Supported sounds]] - if none is specified the one is chosen which is set up in the "Music" sidebar tab. If that selection is empty, the default sound is acoustic_grand_piano |
 |separatelines |"yes" or "no" - show each line as a separate svg or not |
