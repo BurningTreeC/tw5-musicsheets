@@ -1,6 +1,6 @@
 title: $:/plugins/BTC/musicsheets/ui/Symbols/note-heads-harmonic
 tags: $:/tags/MusicSheets/Symbols
-caption: Harmonic (in a K: and/or V: element)
+caption: harmonic (in a K: and/or V: element)
 category: Note Heads
 
 style=harmonic
