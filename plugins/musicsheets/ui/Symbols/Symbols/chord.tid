@@ -1,0 +1,8 @@
+title: $:/plugins/BTC/musicsheets/ui/Symbols/chord
+tags: $:/tags/MusicSheets/Symbols
+caption: [] - Chord (wrap selection)
+category: Symbols
+description: Wrap notes in []
+wrap-selection: true
+prefix: [
+suffix: ]
