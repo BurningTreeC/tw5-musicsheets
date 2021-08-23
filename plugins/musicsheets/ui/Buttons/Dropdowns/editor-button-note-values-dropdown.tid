@@ -1,6 +1,14 @@
 title: $:/plugins/BTC/musicsheets/ui/EditorToolbar/dropdown/note-value
 
-<$macrocall $name="list-tagged-draggable" tag="$:/tags/MusicSheets/NoteValues" subFilter="!is[draft]" itemTemplate="$:/plugins/BTC/musicsheets/ui/Templates/toolbar-item-template-note-values"/>
+<$list filter="[all[shadows+tiddlers]tag[$:/tags/MusicSheets/NoteValues]!is[draft]each[category]]">
+
+<div class="tc-dropdown-item">
+<$text text={{!!category}}/>
+</div>
+
+<$macrocall $name="list-tagged-draggable" tag="$:/tags/MusicSheets/NoteValues" subFilter="!is[draft]category{!!category}" itemTemplate="$:/plugins/BTC/musicsheets/ui/Templates/toolbar-item-template-note-values"/>
+
+</$list>
 
 ----
 
