@@ -163,7 +163,7 @@ tags: $:/tags/Stylesheet
 }
 .abcjs-large .abcjs-midi-progress-background {
 	height: 20px;
-	border: 4px solid #cccccc;
+	border: 4px solid <<colour muted-foreground>>;
 }
 .abcjs-large .abcjs-midi-progress-indicator {
 	height: 28px;
