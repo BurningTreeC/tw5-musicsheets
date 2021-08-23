@@ -2,5 +2,6 @@ title: $:/plugins/BTC/musicsheets/ui/Symbols/ExtendedTrillStart
 tags: $:/tags/MusicSheets/Symbols
 caption: !trill(! Extended trill start
 category: Decorations
+description: start of an extended trill
 
 !trill(!

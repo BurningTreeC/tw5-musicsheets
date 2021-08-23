@@ -9,5 +9,5 @@ title: $:/plugins/BTC/musicsheets/ui/Templates/toolbar-item-template-note-values
 />
 
 """>
-<$link><$text text={{{ [<currentTiddler>get[caption]] }}}/></$link>
+<$link tooltip={{{ [<currentTiddler>get[description]] }}}><$text text={{{ [<currentTiddler>get[caption]] }}}/></$link>
 </$linkcatcher>

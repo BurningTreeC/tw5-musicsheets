@@ -20,5 +20,5 @@ title: $:/plugins/BTC/musicsheets/ui/Templates/toolbar-item-template-symbols
 	$tiddler=<<dropdown-state>>
 />
 """>
-<$link><$text text={{{ [<currentTiddler>get[caption]] }}}/></$link>
+<$link tooltip={{{ [<currentTiddler>get[description]] }}}><$text text={{{ [<currentTiddler>get[caption]] }}}/></$link>
 </$linkcatcher>
