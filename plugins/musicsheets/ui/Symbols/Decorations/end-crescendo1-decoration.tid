@@ -1,5 +1,7 @@
 title: $:/plugins/BTC/musicsheets/ui/Symbols/end-crescendo1-decoration
 tags: $:/tags/MusicSheets/Symbols
 category: Decorations
-caption:
-description: 
+caption: !crescendo)!
+description: end of a < crescendo mark, placed after the last note
+
+!crescendo)!
