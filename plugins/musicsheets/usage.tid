@@ -13,3 +13,4 @@ title: $:/plugins/BTC/musicsheets/usage
 |midi |"yes" or "no" - defines if the midi player is shown or not |
 |sound |can be one of the [[supported sounds|Supported sounds]] - if none is specified the one is chosen which is set up in the "Music" sidebar tab. If that selection is empty, the default sound is acoustic_grand_piano |
 |separatelines |"yes" or "no" - show each line as a separate svg or not |
+|midi-link |"no" to suppress the generated link to download the midi - defaults to "yes" |
