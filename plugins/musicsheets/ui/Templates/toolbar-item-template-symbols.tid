@@ -1,20 +1,25 @@
 title: $:/plugins/BTC/musicsheets/ui/Templates/toolbar-item-template-symbols
 
 <$linkcatcher actions="""
-<$list filter="[<currentTiddler>!has[wrap-selection]]">
-<$action-sendmessage
-	$message="tm-edit-text-operation"
-	$param="insert-text"
-	text={{{ [<currentTiddler>get[text]] }}}
-/>
+<$list filter="[<modifier>!match[ctrl]]" variable="ignore">
+	<$list filter="[<currentTiddler>!has[wrap-selection]]">
+	<$action-sendmessage
+		$message="tm-edit-text-operation"
+		$param="insert-text"
+		text={{{ [<currentTiddler>get[text]] }}}
+	/>
+	</$list>
+	<$list filter="[<currentTiddler>get[wrap-selection]match[true]]">
+	<$action-sendmessage
+		$message="tm-edit-text-operation"
+		$param="wrap-selection"
+		prefix={{{ [<currentTiddler>get[prefix]] }}}
+		suffix={{{ [<currentTiddler>get[suffix]] }}}
+	/>
+	</$list>
 </$list>
-<$list filter="[<currentTiddler>get[wrap-selection]match[true]]">
-<$action-sendmessage
-	$message="tm-edit-text-operation"
-	$param="wrap-selection"
-	prefix={{{ [<currentTiddler>get[prefix]] }}}
-	suffix={{{ [<currentTiddler>get[suffix]] }}}
-/>
+<$list filter="[<modifier>match[ctrl]]" variable="ignore">
+	<$action-sendmessage $message="tm-edit-tiddler"/>
 </$list>
 <$action-deletetiddler
 	$tiddler=<<dropdown-state>>
