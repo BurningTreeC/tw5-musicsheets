@@ -18,6 +18,7 @@ title: $:/plugins/BTC/musicsheets/ui/EditorToolbar/dropdown/clefs
 	$message="tm-new-tiddler"
 	tags="$:/tags/MusicSheets/Clefs"
 	caption="this is shown in the menu"
+	category="'Clefs' or a category you like"
 	text="this is inserted when clicking the button"
 	category="Clefs"
 />

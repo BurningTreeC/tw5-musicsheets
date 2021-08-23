@@ -19,7 +19,7 @@ title: $:/plugins/BTC/musicsheets/ui/EditorToolbar/dropdown/tune-header
 	tags="$:/tags/MusicSheets/TuneHeader"
 	caption="this is shown in the menu"
 	text="this is inserted when clicking the button"
-	category="Tune Header"
+	category="'Tune Header' or a category you like"
 />
 
 <$action-deletetiddler
