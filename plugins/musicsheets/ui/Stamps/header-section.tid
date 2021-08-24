@@ -2,12 +2,12 @@ title: $:/plugins/BTC/musicsheets/ui/Stamps/header
 tags: $:/tags/TextEditor/Snippet
 caption: ABC header section
 
-X:TuneReferenceNumber
-T:Title
-C:Composer
-S:Source
-M:Meter
-L:DefaultNoteLength
-Q:Tempo
-R:Rhythm
-K:Key
+X: TuneReferenceNumber
+T: Title
+C: Composer
+S: Source
+M: Meter
+L: DefaultNoteLength
+Q: Tempo
+R: Rhythm
+K: Key
