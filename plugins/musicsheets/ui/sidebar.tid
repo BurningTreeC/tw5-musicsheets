@@ -33,7 +33,7 @@ caption: Music
 
 <$set name="filterWord" value={{$:/state/musicsheets/filter}}>
 
-<$set name="searchRegexp" value={{{ [[^(?!^]addsuffix<filterWord>addsuffix[.*\n).*]] }}}>
+<$set name="searchRegexp" value={{{ [[^(?!]addsuffix<filterWord>addsuffix[).*$]] }}}>
 
 <$set name="searchWord" value={{$:/state/musicsheets/search}}>
 
@@ -43,7 +43,7 @@ caption: Music
 
 <$list filter="[all[tiddlers]]" variable="tiddler">
 
-<$list filter="[<tiddler>get[text]search-replace:mg:regexp<searchRegexp>,[]!match[]search-replace<filterWord>,[]search<searchWord>]">
+<$list filter="[<tiddler>get[text]search-replace:gm:regexp<searchRegexp>,[]!match[]search-replace<filterWord>,[]search<searchWord>]">
 
 <$link to=<<tiddler>>><$text text=<<tiddler>>/></$link>
 
