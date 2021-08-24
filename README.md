@@ -15,3 +15,6 @@ It is made for Users who want to create, catalogue etc. **music scores** within 
 ## The NodeJs way
 - Clone this repository to your [TIDDLYWIKI_PLUGIN_PATH](https://tiddlywiki.com/#Environment%20Variables%20on%20Node.js)
 - Enable the plugin in your Wiki's [tiddlywiki.info file](https://tiddlywiki.com/#tiddlywiki.info%20Files)
+
+# LICENSE
+This plugin is released under MIT license
