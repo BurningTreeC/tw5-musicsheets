@@ -14,3 +14,5 @@ title: $:/plugins/BTC/musicsheets/usage
 |sound |can be the ''name'' of one of the [ext[supported sounds|https://burningtreec.github.io/tw5-musicsheets/#Supported%20sounds]] - if none is specified the one is chosen which is set up in the "Music" sidebar tab. If that selection is empty, the default sound is acoustic_grand_piano |
 |separatelines |"yes" or "no" - show each line as a separate svg or not |
 |midi-link |"no" to suppress the generated link to download the midi - defaults to "yes" |
+
+> In the ''Clefs'', ''Decorations'', ''Note Heads'', ''Symbols'' and ''Tune Header'' Dropdowns you can edit entries by holding <kbd>ctrl</kbd> while clicking on them. This allows for example changing the Category or the inserted text
