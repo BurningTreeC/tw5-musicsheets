@@ -41,15 +41,19 @@ caption: Music
 
 <$list filter="[<searchWord>!match[]]">
 
+<$set name="filterWordRegexp" value={{{ [<filterWord>addprefix[^]] }}}>
+
 <$list filter="[all[tiddlers]]" variable="tiddler">
 
-<$list filter="[<tiddler>get[text]search-replace:gm:regexp<searchRegexp>,[]!match[]search-replace<filterWord>,[]search<searchWord>]">
+<$list filter="[<tiddler>get[text]search-replace:gm:regexp<searchRegexp>,[]!match[]search-replace::regexp<filterWordRegexp>,[]search<searchWord>]">
 
 <$link to=<<tiddler>>><$text text=<<tiddler>>/></$link>
 
 </$list>
 
 </$list>
+
+</$set>
 
 </$list>
 
