@@ -2,7 +2,7 @@ title: $:/plugins/BTC/musicsheets/ui/SideBar
 tags: $:/tags/SideBar
 caption: Music
 
-!!! Program
+!!! Program for music-playback
 
 <$select tiddler="$:/config/musicsheets/program">
 	<option value=""></option>
