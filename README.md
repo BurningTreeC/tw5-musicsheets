@@ -2,7 +2,8 @@
 musicsheets in [abc notation](https://abcnotation.com/wiki/abc:standard:v2.1) for [TiddlyWiki5](https://tiddlywiki.com)
 
 # About
-This is a [TiddlyWiki5](https://tiddlywiki.com) plugin that uses the [abcjs](https://github.com/paulrosen/abcjs) library
+This is a [TiddlyWiki5](https://tiddlywiki.com) plugin that uses the [abcjs](https://github.com/paulrosen/abcjs) library.
+
 It is made for Users who want to create, catalogue etc. **music scores** within their Wiki
 
 # Installation
