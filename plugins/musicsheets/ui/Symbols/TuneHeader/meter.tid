@@ -1,7 +1,7 @@
 title: $:/plugins/BTC/musicsheets/ui/Symbols/Meter
-tags: $:/tags/MusicSheets/TuneHeader
+tags: $:/tags/MusicSheets/TuneHeader $:/tags/MusicSheets/TuneBody
 caption: M: Meter
-category: Tune Header
+category: Tune Header and Body
 description: The M: field indicates the meter. Apart from standard meters, e.g. M:6/8 or M:4/4, the symbols M:C and M:C| give common time (4/4) and cut time (2/2) respectively. The symbol M:none omits the meter entirely (free meter). It is also possible to specify a complex meter, e.g. M:(2+3+2)/8, to make explicit which beats should be accented. The parentheses around the numerator are optional.
 
 M:

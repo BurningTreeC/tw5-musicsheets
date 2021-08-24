@@ -1,0 +1,7 @@
+title: $:/plugins/BTC/musicsheets/ui/Symbols/symbolline
+tags: $:/tags/MusicSheets/TuneBody
+caption: s: Symbol line
+category: Tune Body
+description: Adding many symbols to a line of music can make a tune difficult to read. In such cases, a symbol line (a line that contains only !…! decorations, "…" chord symbols or annotations) can be used, analogous to a line of lyrics.
+
+s:

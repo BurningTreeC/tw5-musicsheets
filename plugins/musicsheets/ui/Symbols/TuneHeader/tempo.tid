@@ -1,7 +1,7 @@
 title: $:/plugins/BTC/musicsheets/ui/Symbols/Tempo
-tags: $:/tags/MusicSheets/TuneHeader
+tags: $:/tags/MusicSheets/TuneHeader $:/tags/MusicSheets/TuneBody
 caption: Q: Tempo
-category: Tune Header
+category: Tune Header and Body
 description: The Q: field defines the tempo in terms of a number of beats per minute, e.g. Q:1/2=120 means 120 half-note beats per minute.
 
 Q:

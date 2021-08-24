@@ -1,7 +1,7 @@
 title: $:/plugins/BTC/musicsheets/ui/Symbols/Rhythm
-tags: $:/tags/MusicSheets/TuneHeader
+tags: $:/tags/MusicSheets/TuneHeader $:/tags/MusicSheets/TuneBody
 caption: R: Rhythm
-category: Tune Header
+category: Tune Header and Body
 description: Contains an indication of the type of tune (e.g. hornpipe, double jig, single jig, 48-bar polka, etc). This gives the musician some indication of how a tune should be interpreted as well as being useful for database applications.
 
 R:

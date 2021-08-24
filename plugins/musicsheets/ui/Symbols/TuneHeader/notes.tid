@@ -1,7 +1,7 @@
 title: $:/plugins/BTC/musicsheets/ui/Symbols/Notes
-tags: $:/tags/MusicSheets/TuneHeader
+tags: $:/tags/MusicSheets/TuneHeader $:/tags/MusicSheets/TuneBody
 caption: N: Notes
-category: Tune Header
+category: Tune Header and Body
 description: Contains general annotations, such as references to other tunes which are similar, details on how the original notation of the tune was converted to abc, etc.
 
 N:

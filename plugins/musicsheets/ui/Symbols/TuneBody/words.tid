@@ -1,0 +1,7 @@
+title: $:/plugins/BTC/musicsheets/ui/Symbols/words
+tags: $:/tags/MusicSheets/TuneBody
+caption: w: Words
+category: Tune Body
+description: supplies lyrics to be aligned syllable by syllable with previous notes of the current voice.
+
+w:

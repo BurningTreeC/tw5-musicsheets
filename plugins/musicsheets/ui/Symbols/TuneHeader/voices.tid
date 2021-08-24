@@ -1,0 +1,7 @@
+title: $:/plugins/BTC/musicsheets/ui/Symbols/Voices
+tags: $:/tags/MusicSheets/TuneHeader $:/tags/MusicSheets/TuneBody
+caption: V: Voices
+category: Tune Header and Body
+description: The V: field allows the writing of multi-voice music. In multi-voice abc tunes, the tune body is divided into several voices, each beginning with a V: field. All the notes following such a V: field, up to the next V: field or the end of the tune body, belong to the voice.
+
+V:

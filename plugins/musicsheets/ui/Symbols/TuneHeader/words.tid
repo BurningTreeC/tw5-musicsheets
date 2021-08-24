@@ -1,6 +1,7 @@
 title: $:/plugins/BTC/musicsheets/ui/Symbols/Words
-tags: $:/tags/MusicSheets/TuneHeader
+tags: $:/tags/MusicSheets/TuneHeader $:/tags/MusicSheets/TuneBody
 caption: W: Words
-category: Tune Header
+category: Tune Header and Body
+description: can be used for lyrics to be printed separately below the tune.
 
 W:

@@ -1,0 +1,35 @@
+title: $:/plugins/BTC/musicsheets/ui/EditorToolbar/dropdown/tune-body
+
+<$list filter="[all[shadows+tiddlers]tag[$:/tags/MusicSheets/TuneBody]!is[draft]each[category]]">
+
+<div class="tc-dropdown-item">
+<$text text={{!!category}}/>
+</div>
+
+<$macrocall $name="list-tagged-draggable" tag="$:/tags/MusicSheets/TuneBody" subFilter="!is[draft]category{!!category}" itemTemplate="$:/plugins/BTC/musicsheets/ui/Templates/toolbar-item-template-symbols"/>
+
+</$list>
+
+----
+
+<$button tag="a">
+
+<$action-sendmessage
+	$message="tm-new-tiddler"
+	tags="$:/tags/MusicSheets/TuneBody"
+	caption="this is shown in the menu"
+	text="this is inserted when clicking the button"
+	category="'Tune Body' or a category you like"
+/>
+
+<$action-deletetiddler
+	$tiddler=<<dropdown-state>>
+/>
+
+<em>
+
+<$text text="new entry"/>
+
+</em>
+
+</$button>

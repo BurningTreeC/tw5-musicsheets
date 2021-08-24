@@ -13,4 +13,5 @@ musicsheets-note-heads: Show the note heads
 musicsheets-note-values: Show the note values (lengths)
 musicsheets-rests: Insert a rest
 musicsheets-symbols: Show the musical symbols
+musicsheets-tune-body: Show the tune body dropdown
 musicsheets-tune-header: Show the tune header dropdown
