@@ -2,6 +2,6 @@ title: $:/plugins/BTC/musicsheets/ui/Symbols/macro
 tags:  $:/tags/MusicSheets/TuneHeader $:/tags/MusicSheets/TuneBody
 caption: m: Macro
 category: Tune Header and Body
-description: 
+description: use m: (macro) to create your own macros
 
 m:
