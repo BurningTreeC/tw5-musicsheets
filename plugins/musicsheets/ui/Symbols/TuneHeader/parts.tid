@@ -1,7 +1,7 @@
 title: $:/plugins/BTC/musicsheets/ui/Symbols/Parts
-tags: $:/tags/MusicSheets/TuneHeader $:/tags/MusicSheets/TuneBody
+tags: $:/tags/MusicSheets/TuneHeader $:/tags/MusicSheets/TuneBody $:/tags/MusicSheets/Inline
 caption: P: Parts
-category: Tune Header and Body
+category: Tune Header, Body and Inline
 description: The P: field can be used in the tune header to state the order in which the tune parts are played, i.e. P:ABABCDCD, and then inside the tune body to mark each part, i.e. P:A or P:B. (In this context part refers to a section of the tune, rather than a voice in multi-voice music.)
 
 P:

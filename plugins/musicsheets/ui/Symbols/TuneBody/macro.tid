@@ -1,7 +1,7 @@
 title: $:/plugins/BTC/musicsheets/ui/Symbols/macro
-tags:  $:/tags/MusicSheets/TuneHeader $:/tags/MusicSheets/TuneBody
+tags:  $:/tags/MusicSheets/TuneHeader $:/tags/MusicSheets/TuneBody $:/tags/MusicSheets/Inline
 caption: m: Macro
-category: Tune Header and Body
+category: Tune Header, Body and Inline
 description: use m: (macro) to create your own macros
 
 m:

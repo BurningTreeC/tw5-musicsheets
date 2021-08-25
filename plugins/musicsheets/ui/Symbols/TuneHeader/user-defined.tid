@@ -1,7 +1,7 @@
 title: $:/plugins/BTC/musicsheets/ui/Symbols/UserDefined
-tags: $:/tags/MusicSheets/TuneHeader $:/tags/MusicSheets/TuneBody
+tags: $:/tags/MusicSheets/TuneHeader $:/tags/MusicSheets/TuneBody $:/tags/MusicSheets/Inline
 caption: U: User defined
-category: Tune Header and Body
+category: Tune Header, Body and Inline
 description: As a short cut to writing symbols which avoids the !symbol! syntax, the letters H-W and h-w and the symbol ~ can be assigned with the U: field.
 
 U:

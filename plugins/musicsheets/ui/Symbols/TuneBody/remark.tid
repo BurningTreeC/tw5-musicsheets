@@ -1,7 +1,7 @@
 title: $:/plugins/BTC/musicsheets/ui/Symbols/remark
-tags: $:/tags/MusicSheets/TuneBody
+tags: $:/tags/MusicSheets/TuneBody $:/tags/MusicSheets/Inline
 caption: [r: remark] - (wrap selection)
-category: Tune Body
+category: Tune Body and Inline
 wrap-selection: true
 description: you can use the syntax [r:remark] to write a remark in the middle of a line of music.
 prefix: [r:

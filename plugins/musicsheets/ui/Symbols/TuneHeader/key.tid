@@ -1,7 +1,7 @@
 title: $:/plugins/BTC/musicsheets/ui/Symbols/Key
 tags: $:/tags/MusicSheets/TuneHeader $:/tags/MusicSheets/TuneBody
 caption: K: Key
-category: Tune Header and Body
+category: Tune Header, Body and Inline
 description: Note that the first occurrence of the K: field, which must appear in every tune, finishes the tune header. All following lines are considered to be part of the tune body. The key signature should be specified with a capital letter (A-G) which may be followed by a # or b for sharp or flat respectively. In addition the mode should be specified (when no mode is indicated, major is assumed).
 
 K:

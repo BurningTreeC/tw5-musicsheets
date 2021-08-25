@@ -1,7 +1,0 @@
-title: $:/plugins/BTC/musicsheets/ui/Symbols/Information
-tags: $:/tags/MusicSheets/TuneHeader $:/tags/MusicSheets/TuneBody
-caption: I: Information
-category: Tune Header and Body
-description: The I:(instruction) field is used for an extended set of instruction directives concerned with how the abc code is to be interpreted.
-
-I:
