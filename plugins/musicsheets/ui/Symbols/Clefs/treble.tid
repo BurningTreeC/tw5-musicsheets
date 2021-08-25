@@ -4,4 +4,4 @@ caption: Treble
 category: Clefs
 description: The treble clef
 
-treble
+clef=treble
